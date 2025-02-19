@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrossel de Canais</title>
+    <style>
+        .carousel-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .carousel-slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-slide {
+            min-width: 20%;
+            padding: 10px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .channel-card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 10px;
+            transition: transform 0.3s;
+        }
+
+        .channel-card:hover {
+            transform: scale(1.05);
+        }
+
+        .channel-img {
+            width: 90px;
+            height: 90px;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        .channel-name {
+            margin-top: 10px;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        .carousel-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0,0,0,0.5);
+            color: white;
+            padding: 15px;
+            cursor: pointer;
+            border-radius: 50%;
+            z-index: 10;
+        }
+
+        .arrow-left { left: 20px; }
+        .arrow-right { right: 20px; }
+
+        @media (max-width: 768px) {
+            .carousel-slide {
+                min-width: 50%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .carousel-slide {
+                min-width: 100%;
+            }
+        }
+
+        .section {
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="carousel-container">
+        <div class="carousel-arrow arrow-left" onclick="moveSlide(-1)">❮</div>
+        <div class="section">
+            <div class="carousel-slider" id="carousel-slider-1">
+                <!-- Canais 1-14 -->
+                <div class="carousel-slide">
+                    <div class="channel-card">
+                      <img src="imagens-canais-incio/bandtv.png" alt="Canal 1" class="channel-img">
+                        <div class="channel-name">BAND TV</div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                  <div class="channel-card">
+                        <img src="imagens-canais-incio/globosp.png" alt="Canal 2" class="channel-img">
+                        <div class="channel-name">GLOBO</div>
+                    </div>
+                </div>
+				
+				 <div class="carousel-slide">
+                   <div class="channel-card">
+                        <img src="imagens-canais-incio/jetsons.png" alt="Canal 2" class="channel-img">
+                        <div class="channel-name">JETSONS</div>
+                    </div>
+					 
+					 
+                </div>
+				
+				 <div class="carousel-slide">
+                   <div class="channel-card">
+                        <img src="imagens-canais-incio/canal29.png" alt="Canal 2" class="channel-img">
+                        <div class="channel-name">CANAL 29</div>
+                    </div>
+                </div>
+				
+				 <div class="carousel-slide">
+                    <div class="channel-card">
+                      <img src="imagens-canais-incio/Jovem_Pan_News.png" alt="Canal 2" class="channel-img">
+                        <div class="channel-name">JOVEM PAN NEWS</div>
+                    </div>
+                </div>
+				
+				 <div class="carousel-slide">
+                    <div class="channel-card">
+                        <img src="imagens-canais-incio/classiquetv.png" alt="Canal 2" class="channel-img">
+                        <div class="channel-name">Canal Música</div>
+                    </div>
+                </div>
+				
+				 <div class="carousel-slide">
+                    <div class="channel-card">
+                        <img src="imagens-canais-incio/animax.jpg" alt="Canal 2" class="channel-img">
+                        <div class="channel-name">Canal Música</div>
+                    </div>
+                </div>
+				
+				 <div class="carousel-slide">
+                    <div class="channel-card">
+                      <img src="imagens-canais-incio/retrocartoon.png" alt="Canal 2" class="channel-img">
+                        <div class="channel-name">RETRÔ CARTON</div>
+                    </div>
+                </div>
+				
+				 <div class="carousel-slide">
+                   <div class="channel-card">
+                        <img src="imagens-canais-incio/desenhos-classicos.png" alt="Canal 2" class="channel-img">
+                        <div class="channel-name">DESENHOS CLASSICOS</div>
+                    </div>
+                </div>
+				
+                <!-- Adicione os outros canais aqui -->
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="carousel-slider" id="carousel-slider-2">
+                <!-- Canais 1-14 -->
+                <div class="carousel-slide">
+                  <div class="channel-card">
+                        <img src="imagens-canais-incio/otakusing.jpg" alt="Canal 1" class="channel-img">
+                        <div class="channel-name">OTAKU SIGN</div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <div class="channel-card">
+                        <img src="imagens-canais-incio/tv-cultura.png" alt="Canal 2" class="channel-img">
+                        <div class="channel-name">Canal Música</div>
+                    </div>
+                </div>
+				
+				 <div class="carousel-slide">
+                   <div class="channel-card">
+                        <img src="imagens-canais-incio/Rede_Vida.png" alt="Canal 2" class="channel-img">
+                        <div class="channel-name">REDE VIDA</div>
+                    </div>
+                </div>
+				
+				 <div class="carousel-slide">
+                    <div class="channel-card">
+                      <img src="imagens-canais-incio/awtv.png" alt="Canal 2" class="channel-img">
+                        <div class="channel-name">AW TV</div>
+                    </div>
+                </div>
+				
+				 <div class="carousel-slide">
+                    <div class="channel-card">
+                      <img src="imagens-canais-incio/Record_News.png" alt="Canal 2" class="channel-img">
+                        <div class="channel-name">RECORD NEWS</div>
+                    </div>
+                </div>
+                <!-- Adicione os outros canais aqui -->
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="carousel-slider" id="carousel-slider-3">
+                <!-- Canais 1-14 -->
+                <div class="carousel-slide">
+                    <div class="channel-card">
+                      <img src="imagens-canais-incio/glntv.png" alt="Canal 1" class="channel-img">
+                        <div class="channel-name">GLN FILMES</div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <div class="channel-card">
+                      <img src="imagens-canais-incio/manchete.jpg" alt="Canal 2" class="channel-img">
+                        <div class="channel-name">REE MANCHETE</div>
+                    </div>
+                </div>
+				
+				 <div class="carousel-slide">
+                   <div class="channel-card">
+                        <img src="imagens-canais-incio/tv-brasil.png" alt="Canal 2" class="channel-img">
+                        <div class="channel-name">TV BRASIL</div>
+                    </div>
+                </div>
+				
+				 <div class="carousel-slide">
+                   <div class="channel-card">
+                        <img src="imagens-canais-incio/grjngo.jpg" alt="Canal 2" class="channel-img">
+                        <div class="channel-name">GRJNGO</div>
+                    </div>
+                </div>
+				
+				 <div class="carousel-slide">
+                    <div class="channel-card">
+                      <img src="imagens-canais-incio/canalfilmesonline.png" alt="Canal 2" class="channel-img">
+                        <div class="channel-name">TV FILMES ONLINE</div>
+                    </div>
+                </div>
+                <!-- Adicione os outros canais aqui -->
+            </div>
+        </div>
+        <div class="carousel-arrow arrow-right" onclick="moveSlide(1)">❯</div>
+    </div>
+
+    <script>
+        const sliders = [document.querySelector('#carousel-slider-1'), document.querySelector('#carousel-slider-2'), document.querySelector('#carousel-slider-3')];
+        let slideIndices = [0, 0, 0];
+        const totalSlides = 14; // Atualizado para 14 slides
+
+        function moveSlide(direction) {
+            sliders.forEach((slider, index) => {
+                const slideWidth = slider.querySelector('.carousel-slide').offsetWidth;
+                slideIndices[index] = Math.max(0, Math.min(slideIndices[index] + direction, totalSlides - 5));
+                slider.style.transform = `translateX(-${slideIndices[index] * slideWidth}px)`;
+            });
+        }
+    </script>
+</body>
+</html>
